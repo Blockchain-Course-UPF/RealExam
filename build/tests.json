@@ -1,0 +1,18 @@
+{
+  "contracts": {
+    "ExtractReward": "28668545cec7bff5b52ddb981edf01ebdfd66804",
+    "GoodToken": "8e9b27cb826dac83a50c99584d36eed40c5b5d70",
+    "Rewarder": "77193832292c24bff30168d8b8760709b51df02c",
+    "TrusterLenderPool": "6d4b0c6748f5f4d48adeaa2064a094579f3ac717"
+  },
+  "tests": {
+    "tests/test_exam.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "cde197763bc219d31d763a3c95715ac798dbd781",
+      "txhash": []
+    }
+  },
+  "tx": {}
+}

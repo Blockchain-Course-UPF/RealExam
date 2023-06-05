@@ -1,0 +1,3943 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "payee",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "weiAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposited",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Rewarder",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "GoodToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "reward",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "1": "contracts/reward.sol",
+    "2": "interfaces/IERC20.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/reward.sol",
+    "exportedSymbols": {
+      "IERC20": [
+        336
+      ],
+      "Rewarder": [
+        267
+      ]
+    },
+    "id": 268,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 180,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "interfaces/IERC20.sol",
+        "file": "../interfaces/IERC20.sol",
+        "id": 181,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 268,
+        "sourceUnit": 337,
+        "src": "25:34:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Rewarder",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 267,
+        "linearizedBaseContracts": [
+          267
+        ],
+        "name": "Rewarder",
+        "nameLocation": "70:8:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "cb94332b",
+            "id": 184,
+            "mutability": "mutable",
+            "name": "GoodToken",
+            "nameLocation": "101:9:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 267,
+            "src": "87:23:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20_$336",
+              "typeString": "contract IERC20"
+            },
+            "typeName": {
+              "id": 183,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 182,
+                "name": "IERC20",
+                "nameLocations": [
+                  "87:6:1"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 336,
+                "src": "87:6:1"
+              },
+              "referencedDeclaration": 336,
+              "src": "87:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20_$336",
+                "typeString": "contract IERC20"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "2da466a7b24304f47e87fa2e1e5a81b9831ce54fec19055ce277ca2f39ba42c4",
+            "id": 190,
+            "name": "Deposited",
+            "nameLocation": "122:9:1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 186,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "payee",
+                  "nameLocation": "148:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 190,
+                  "src": "132:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 185,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "132:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 188,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "weiAmount",
+                  "nameLocation": "163:9:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 190,
+                  "src": "155:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 187,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "155:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "131:42:1"
+            },
+            "src": "116:58:1"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "8bc804330ccb1f29047eb908a8c527b762c6376b152b9b0092c0b9834b5e0c6c",
+            "id": 196,
+            "name": "Rewarder",
+            "nameLocation": "185:8:1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 195,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 192,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nameLocation": "202:8:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 196,
+                  "src": "194:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 191,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "194:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 194,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "220:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 196,
+                  "src": "212:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 193,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "193:34:1"
+            },
+            "src": "179:49:1"
+          },
+          {
+            "body": {
+              "id": 210,
+              "nodeType": "Block",
+              "src": "255:95:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 205,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "arguments": [
+                            {
+                              "expression": {
+                                "id": 201,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -15,
+                                "src": "293:3:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 202,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "297:6:1",
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "src": "293:10:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "expression": {
+                              "id": 199,
+                              "name": "GoodToken",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 184,
+                              "src": "273:9:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IERC20_$336",
+                                "typeString": "contract IERC20"
+                              }
+                            },
+                            "id": 200,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "283:9:1",
+                            "memberName": "balanceOf",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 281,
+                            "src": "273:19:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                              "typeString": "function (address) view external returns (uint256)"
+                            }
+                          },
+                          "id": 203,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "273:31:1",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "hexValue": "30",
+                          "id": 204,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "306:1:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "273:34:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "596f7520617265206e6f74206120686f6c646572",
+                        "id": 206,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "309:22:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_0025e8208ee6411f08fa0cf029b38baccd4b4d786a29bdc644d25de3ff52acad",
+                          "typeString": "literal_string \"You are not a holder\""
+                        },
+                        "value": "You are not a holder"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_0025e8208ee6411f08fa0cf029b38baccd4b4d786a29bdc644d25de3ff52acad",
+                          "typeString": "literal_string \"You are not a holder\""
+                        }
+                      ],
+                      "id": 198,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "265:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 207,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "265:67:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 208,
+                  "nodeType": "ExpressionStatement",
+                  "src": "265:67:1"
+                },
+                {
+                  "id": 209,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "342:1:1"
+                }
+              ]
+            },
+            "id": 211,
+            "name": "OnlyHolders",
+            "nameLocation": "243:11:1",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 197,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "255:0:1"
+            },
+            "src": "234:116:1",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 222,
+              "nodeType": "Block",
+              "src": "399:49:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 220,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 216,
+                      "name": "GoodToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 184,
+                      "src": "409:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$336",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 218,
+                          "name": "tokenAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 213,
+                          "src": "428:12:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 217,
+                        "name": "IERC20",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 336,
+                        "src": "421:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IERC20_$336_$",
+                          "typeString": "type(contract IERC20)"
+                        }
+                      },
+                      "id": 219,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "421:20:1",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$336",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "src": "409:32:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$336",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "id": 221,
+                  "nodeType": "ExpressionStatement",
+                  "src": "409:32:1"
+                }
+              ]
+            },
+            "id": 223,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 214,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 213,
+                  "mutability": "mutable",
+                  "name": "tokenAddress",
+                  "nameLocation": "378:12:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 223,
+                  "src": "370:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 212,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "369:22:1"
+            },
+            "returnParameters": {
+              "id": 215,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "399:0:1"
+            },
+            "scope": 267,
+            "src": "357:91:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 233,
+              "nodeType": "Block",
+              "src": "489:54:1",
+              "statements": [
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 227,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "514:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 228,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "518:6:1",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "514:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 229,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "526:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 230,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "530:5:1",
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "src": "526:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 226,
+                      "name": "Deposited",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 190,
+                      "src": "504:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256)"
+                      }
+                    },
+                    "id": 231,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "504:32:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 232,
+                  "nodeType": "EmitStatement",
+                  "src": "499:37:1"
+                }
+              ]
+            },
+            "functionSelector": "d0e30db0",
+            "id": 234,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "464:7:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 224,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "471:2:1"
+            },
+            "returnParameters": {
+              "id": 225,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "489:0:1"
+            },
+            "scope": 267,
+            "src": "455:88:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 265,
+              "nodeType": "Block",
+              "src": "590:171:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 246,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "arguments": [
+                              {
+                                "id": 242,
+                                "name": "this",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -28,
+                                "src": "616:4:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_Rewarder_$267",
+                                  "typeString": "contract Rewarder"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_contract$_Rewarder_$267",
+                                  "typeString": "contract Rewarder"
+                                }
+                              ],
+                              "id": 241,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "608:7:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 240,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "608:7:1",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 243,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "608:13:1",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "id": 244,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "622:7:1",
+                          "memberName": "balance",
+                          "nodeType": "MemberAccess",
+                          "src": "608:21:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "hexValue": "31",
+                          "id": 245,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "633:7:1",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "608:32:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "6e6f7420656e6f756768206574686572",
+                        "id": 247,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "642:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_fdb33999d8652fc9ba92246ba8830bea6aeb584ac45b0c37d55b7db9ae3fb8cd",
+                          "typeString": "literal_string \"not enough ether\""
+                        },
+                        "value": "not enough ether"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_fdb33999d8652fc9ba92246ba8830bea6aeb584ac45b0c37d55b7db9ae3fb8cd",
+                          "typeString": "literal_string \"not enough ether\""
+                        }
+                      ],
+                      "id": 239,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "600:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 248,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "600:61:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 249,
+                  "nodeType": "ExpressionStatement",
+                  "src": "600:61:1"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 251,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "685:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 252,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "689:6:1",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "685:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "hexValue": "31",
+                        "id": 253,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "697:7:1",
+                        "subdenomination": "ether",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000"
+                        },
+                        "value": "1"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000"
+                        }
+                      ],
+                      "id": 250,
+                      "name": "Rewarder",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 196,
+                      "src": "676:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256)"
+                      }
+                    },
+                    "id": 254,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "676:29:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 255,
+                  "nodeType": "EmitStatement",
+                  "src": "671:34:1"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "31",
+                        "id": 262,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "745:7:1",
+                        "subdenomination": "ether",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000"
+                        },
+                        "value": "1"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "expression": {
+                              "id": 258,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -15,
+                              "src": "724:3:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 259,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "728:6:1",
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "src": "724:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 257,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "716:8:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_payable_$",
+                            "typeString": "type(address payable)"
+                          },
+                          "typeName": {
+                            "id": 256,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "716:8:1",
+                            "stateMutability": "payable",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 260,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "716:19:1",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 261,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "736:8:1",
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "src": "716:28:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 263,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "716:37:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 264,
+                  "nodeType": "ExpressionStatement",
+                  "src": "716:37:1"
+                }
+              ]
+            },
+            "functionSelector": "228cb733",
+            "id": 266,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 237,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 236,
+                  "name": "OnlyHolders",
+                  "nameLocations": [
+                    "578:11:1"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 211,
+                  "src": "578:11:1"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "578:11:1"
+              }
+            ],
+            "name": "reward",
+            "nameLocation": "562:6:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 235,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "568:2:1"
+            },
+            "returnParameters": {
+              "id": 238,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "590:0:1"
+            },
+            "scope": 267,
+            "src": "553:208:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 268,
+        "src": "61:703:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:764:1"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5060405161032138038061032183398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b61028e806100936000396000f3fe6080604052600436106100345760003560e01c8063228cb73314610039578063cb94332b14610050578063d0e30db01461008c575b600080fd5b34801561004557600080fd5b5061004e610094565b005b34801561005c57600080fd5b50600054610070906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b61004e610208565b600080546040516370a0823160e01b81523360048201526001600160a01b03909116906370a0823190602401602060405180830381865afa1580156100dd573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610101919061023f565b1161014a5760405162461bcd60e51b81526020600482015260146024820152732cb7ba9030b932903737ba1030903437b63232b960611b60448201526064015b60405180910390fd5b670de0b6b3a76400004710156101955760405162461bcd60e51b815260206004820152601060248201526f3737ba1032b737bab3b41032ba3432b960811b6044820152606401610141565b60408051338152670de0b6b3a764000060208201527f8bc804330ccb1f29047eb908a8c527b762c6376b152b9b0092c0b9834b5e0c6c910160405180910390a16040513390600090670de0b6b3a76400009082818181858883f19350505050158015610205573d6000803e3d6000fd5b50565b60405134815233907f2da466a7b24304f47e87fa2e1e5a81b9831ce54fec19055ce277ca2f39ba42c49060200160405180910390a2565b60006020828403121561025157600080fd5b505191905056fea2646970667358221220b78acb0d87a2a92a9dd9be7438e9913c8df18c97138cad1b9347625b6fc6d6ca64736f6c63430008100033",
+  "bytecodeSha1": "77193832292c24bff30168d8b8760709b51df02c",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.16+commit.07a7930e"
+  },
+  "contractName": "Rewarder",
+  "coverageMap": {
+    "branches": {
+      "1": {
+        "Rewarder.reward": {
+          "4": [
+            608,
+            640,
+            true
+          ]
+        }
+      },
+      "2": {}
+    },
+    "statements": {
+      "1": {
+        "Rewarder.deposit": {
+          "3": [
+            499,
+            536
+          ]
+        },
+        "Rewarder.reward": {
+          "0": [
+            600,
+            661
+          ],
+          "1": [
+            671,
+            705
+          ],
+          "2": [
+            716,
+            753
+          ]
+        }
+      },
+      "2": {}
+    }
+  },
+  "dependencies": [
+    "IERC20"
+  ],
+  "deployedBytecode": "6080604052600436106100345760003560e01c8063228cb73314610039578063cb94332b14610050578063d0e30db01461008c575b600080fd5b34801561004557600080fd5b5061004e610094565b005b34801561005c57600080fd5b50600054610070906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b61004e610208565b600080546040516370a0823160e01b81523360048201526001600160a01b03909116906370a0823190602401602060405180830381865afa1580156100dd573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610101919061023f565b1161014a5760405162461bcd60e51b81526020600482015260146024820152732cb7ba9030b932903737ba1030903437b63232b960611b60448201526064015b60405180910390fd5b670de0b6b3a76400004710156101955760405162461bcd60e51b815260206004820152601060248201526f3737ba1032b737bab3b41032ba3432b960811b6044820152606401610141565b60408051338152670de0b6b3a764000060208201527f8bc804330ccb1f29047eb908a8c527b762c6376b152b9b0092c0b9834b5e0c6c910160405180910390a16040513390600090670de0b6b3a76400009082818181858883f19350505050158015610205573d6000803e3d6000fd5b50565b60405134815233907f2da466a7b24304f47e87fa2e1e5a81b9831ce54fec19055ce277ca2f39ba42c49060200160405180910390a2565b60006020828403121561025157600080fd5b505191905056fea2646970667358221220b78acb0d87a2a92a9dd9be7438e9913c8df18c97138cad1b9347625b6fc6d6ca64736f6c63430008100033",
+  "deployedSourceMap": "61:703:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;553:208;;;;;;;;;;;;;:::i;:::-;;87:23;;;;;;;;;;-1:-1:-1;87:23:1;;;;-1:-1:-1;;;;;87:23:1;;;;;;-1:-1:-1;;;;;192:32:3;;;174:51;;162:2;147:18;87:23:1;;;;;;;455:88;;;:::i;553:208::-;306:1;273:9;;:31;;-1:-1:-1;;;273:31:1;;293:10;273:31;;;174:51:3;-1:-1:-1;;;;;273:9:1;;;;:19;;147:18:3;;273:31:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:34;265:67;;;;-1:-1:-1;;;265:67:1;;835:2:3;265:67:1;;;817:21:3;874:2;854:18;;;847:30;-1:-1:-1;;;893:18:3;;;886:50;953:18;;265:67:1;;;;;;;;;633:7:::1;608:21;:32;;600:61;;;::::0;-1:-1:-1;;;600:61:1;;1184:2:3;600:61:1::1;::::0;::::1;1166:21:3::0;1223:2;1203:18;;;1196:30;-1:-1:-1;;;1242:18:3;;;1235:46;1298:18;;600:61:1::1;982:340:3::0;600:61:1::1;676:29;::::0;;685:10:::1;1527:51:3::0;;697:7:1::1;1609:2:3::0;1594:18;;1587:34;676:29:1::1;::::0;1500:18:3;676:29:1::1;;;;;;;716:37;::::0;724:10:::1;::::0;716:37;;745:7:::1;::::0;716:37;;;;745:7;724:10;716:37;::::1;;;;;;;;;;;;;::::0;::::1;;;;;;553:208::o:0;455:88::-;504:32;;526:9;1778:25:3;;514:10:1;;504:32;;1766:2:3;1751:18;504:32:1;;;;;;;455:88::o;444:184:3:-;514:6;567:2;555:9;546:7;542:23;538:32;535:52;;;583:1;580;573:12;535:52;-1:-1:-1;606:16:3;;444:184;-1:-1:-1;444:184:3:o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    61,
+    764
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x34 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x228CB733 EQ PUSH2 0x39 JUMPI DUP1 PUSH4 0xCB94332B EQ PUSH2 0x50 JUMPI DUP1 PUSH4 0xD0E30DB0 EQ PUSH2 0x8C JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x45 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x4E PUSH2 0x94 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x5C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x0 SLOAD PUSH2 0x70 SWAP1 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0x4E PUSH2 0x208 JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x40 MLOAD PUSH4 0x70A08231 PUSH1 0xE0 SHL DUP2 MSTORE CALLER PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND SWAP1 PUSH4 0x70A08231 SWAP1 PUSH1 0x24 ADD PUSH1 0x20 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 DUP7 GAS STATICCALL ISZERO DUP1 ISZERO PUSH2 0xDD JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP PUSH1 0x40 MLOAD RETURNDATASIZE PUSH1 0x1F NOT PUSH1 0x1F DUP3 ADD AND DUP3 ADD DUP1 PUSH1 0x40 MSTORE POP DUP2 ADD SWAP1 PUSH2 0x101 SWAP2 SWAP1 PUSH2 0x23F JUMP JUMPDEST GT PUSH2 0x14A JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x14 PUSH1 0x24 DUP3 ADD MSTORE PUSH20 0x2CB7BA9030B932903737BA1030903437B63232B9 PUSH1 0x61 SHL PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 REVERT JUMPDEST PUSH8 0xDE0B6B3A7640000 SELFBALANCE LT ISZERO PUSH2 0x195 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x10 PUSH1 0x24 DUP3 ADD MSTORE PUSH16 0x3737BA1032B737BAB3B41032BA3432B9 PUSH1 0x81 SHL PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD PUSH2 0x141 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD CALLER DUP2 MSTORE PUSH8 0xDE0B6B3A7640000 PUSH1 0x20 DUP3 ADD MSTORE PUSH32 0x8BC804330CCB1F29047EB908A8C527B762C6376B152B9B0092C0B9834B5E0C6C SWAP2 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 LOG1 PUSH1 0x40 MLOAD CALLER SWAP1 PUSH1 0x0 SWAP1 PUSH8 0xDE0B6B3A7640000 SWAP1 DUP3 DUP2 DUP2 DUP2 DUP6 DUP9 DUP4 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH2 0x205 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP JUMP JUMPDEST PUSH1 0x40 MLOAD CALLVALUE DUP2 MSTORE CALLER SWAP1 PUSH32 0x2DA466A7B24304F47E87FA2E1E5A81B9831CE54FEC19055CE277CA2F39BA42C4 SWAP1 PUSH1 0x20 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 LOG2 JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x251 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP MLOAD SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xB7 DUP11 0xCB 0xD DUP8 LOG2 0xA9 0x2A SWAP14 0xD9 0xBE PUSH21 0x38E9913C8DF18C97138CAD1B9347625B6FC6D6CA64 PUSH20 0x6F6C634300081000330000000000000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "CALLDATASIZE",
+      "path": "1"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "LT",
+      "path": "1"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x34"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "CALLDATALOAD",
+      "path": "1"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0xE0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "SHR",
+      "path": "1"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH4",
+      "path": "1",
+      "value": "0x228CB733"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "EQ",
+      "path": "1"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x39"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH4",
+      "path": "1",
+      "value": "0xCB94332B"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "EQ",
+      "path": "1"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x50"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH4",
+      "path": "1",
+      "value": "0xD0E30DB0"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "EQ",
+      "path": "1"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x8C"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "56": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        61,
+        764
+      ],
+      "op": "REVERT",
+      "path": "1"
+    },
+    "57": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "58": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "CALLVALUE",
+      "path": "1"
+    },
+    "59": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "60": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "ISZERO",
+      "path": "1"
+    },
+    "61": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x45"
+    },
+    "64": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "65": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "67": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "68": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "REVERT",
+      "path": "1"
+    },
+    "69": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "70": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "71": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x4E"
+    },
+    "74": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x94"
+    },
+    "77": {
+      "fn": "Rewarder.reward",
+      "jump": "i",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "JUMP",
+      "path": "1"
+    },
+    "78": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "79": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "STOP",
+      "path": "1"
+    },
+    "80": {
+      "offset": [
+        87,
+        110
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "81": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "CALLVALUE",
+      "path": "1"
+    },
+    "82": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "83": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "ISZERO",
+      "path": "1"
+    },
+    "84": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x5C"
+    },
+    "87": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "88": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "90": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "91": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "REVERT",
+      "path": "1"
+    },
+    "92": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "93": {
+      "op": "POP"
+    },
+    "94": {
+      "offset": [
+        87,
+        110
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "96": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "SLOAD",
+      "path": "1"
+    },
+    "97": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x70"
+    },
+    "100": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "101": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "103": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "105": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "107": {
+      "op": "SHL"
+    },
+    "108": {
+      "op": "SUB"
+    },
+    "109": {
+      "offset": [
+        87,
+        110
+      ],
+      "op": "AND",
+      "path": "1"
+    },
+    "110": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "111": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "JUMP",
+      "path": "1"
+    },
+    "112": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "113": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "115": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "116": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "118": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "120": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "122": {
+      "op": "SHL"
+    },
+    "123": {
+      "op": "SUB"
+    },
+    "124": {
+      "op": "SWAP1"
+    },
+    "125": {
+      "op": "SWAP2"
+    },
+    "126": {
+      "op": "AND"
+    },
+    "127": {
+      "op": "DUP2"
+    },
+    "128": {
+      "op": "MSTORE"
+    },
+    "129": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "131": {
+      "op": "ADD"
+    },
+    "132": {
+      "offset": [
+        87,
+        110
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "134": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "135": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "136": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "SWAP2",
+      "path": "1"
+    },
+    "137": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "SUB",
+      "path": "1"
+    },
+    "138": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "139": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        87,
+        110
+      ],
+      "op": "RETURN",
+      "path": "1"
+    },
+    "140": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        455,
+        543
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "141": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        455,
+        543
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x4E"
+    },
+    "144": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        455,
+        543
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x208"
+    },
+    "147": {
+      "fn": "Rewarder.deposit",
+      "jump": "i",
+      "offset": [
+        455,
+        543
+      ],
+      "op": "JUMP",
+      "path": "1"
+    },
+    "148": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "149": {
+      "offset": [
+        306,
+        307
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "151": {
+      "offset": [
+        273,
+        282
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "152": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        282
+      ],
+      "op": "SLOAD",
+      "path": "1"
+    },
+    "153": {
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "155": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "156": {
+      "op": "PUSH4",
+      "value": "0x70A08231"
+    },
+    "161": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "163": {
+      "op": "SHL"
+    },
+    "164": {
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "165": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "166": {
+      "offset": [
+        293,
+        303
+      ],
+      "op": "CALLER",
+      "path": "1"
+    },
+    "167": {
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x4"
+    },
+    "169": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP3",
+      "path": "1"
+    },
+    "170": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "ADD",
+      "path": "1"
+    },
+    "171": {
+      "op": "MSTORE"
+    },
+    "172": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "174": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "176": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "178": {
+      "op": "SHL"
+    },
+    "179": {
+      "op": "SUB"
+    },
+    "180": {
+      "offset": [
+        273,
+        282
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "181": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        282
+      ],
+      "op": "SWAP2",
+      "path": "1"
+    },
+    "182": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        282
+      ],
+      "op": "AND",
+      "path": "1"
+    },
+    "183": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        282
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "184": {
+      "offset": [
+        273,
+        292
+      ],
+      "op": "PUSH4",
+      "path": "1",
+      "value": "0x70A08231"
+    },
+    "189": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        292
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "190": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "192": {
+      "op": "ADD"
+    },
+    "193": {
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x20"
+    },
+    "195": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "197": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "198": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "199": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP4",
+      "path": "1"
+    },
+    "200": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "SUB",
+      "path": "1"
+    },
+    "201": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "202": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP7",
+      "path": "1"
+    },
+    "203": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "GAS",
+      "path": "1"
+    },
+    "204": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "STATICCALL",
+      "path": "1"
+    },
+    "205": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "ISZERO",
+      "path": "1"
+    },
+    "206": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "207": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "ISZERO",
+      "path": "1"
+    },
+    "208": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0xDD"
+    },
+    "211": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "212": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "1"
+    },
+    "213": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "215": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "216": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "1"
+    },
+    "217": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "1"
+    },
+    "218": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "220": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "REVERT",
+      "optimizer_revert": true,
+      "path": "1"
+    },
+    "221": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "222": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "223": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "224": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "225": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "226": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "228": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "229": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "1"
+    },
+    "230": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x1F"
+    },
+    "232": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "NOT",
+      "path": "1"
+    },
+    "233": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x1F"
+    },
+    "235": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP3",
+      "path": "1"
+    },
+    "236": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "ADD",
+      "path": "1"
+    },
+    "237": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "AND",
+      "path": "1"
+    },
+    "238": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP3",
+      "path": "1"
+    },
+    "239": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "ADD",
+      "path": "1"
+    },
+    "240": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "241": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "243": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "244": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "245": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "246": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "ADD",
+      "path": "1"
+    },
+    "247": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "248": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x101"
+    },
+    "251": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "SWAP2",
+      "path": "1"
+    },
+    "252": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "253": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x23F"
+    },
+    "256": {
+      "fn": "Rewarder.reward",
+      "jump": "i",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "JUMP",
+      "path": "1"
+    },
+    "257": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        273,
+        304
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "258": {
+      "offset": [
+        273,
+        307
+      ],
+      "op": "GT",
+      "path": "1"
+    },
+    "259": {
+      "offset": [
+        265,
+        332
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x14A"
+    },
+    "262": {
+      "offset": [
+        265,
+        332
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "263": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "265": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "266": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "270": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "272": {
+      "op": "SHL"
+    },
+    "273": {
+      "offset": [
+        265,
+        332
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "274": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "275": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "277": {
+      "offset": [
+        265,
+        332
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x4"
+    },
+    "279": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "DUP3",
+      "path": "1"
+    },
+    "280": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "ADD",
+      "path": "1"
+    },
+    "281": {
+      "op": "MSTORE"
+    },
+    "282": {
+      "op": "PUSH1",
+      "value": "0x14"
+    },
+    "284": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "286": {
+      "op": "DUP3"
+    },
+    "287": {
+      "op": "ADD"
+    },
+    "288": {
+      "op": "MSTORE"
+    },
+    "289": {
+      "op": "PUSH20",
+      "value": "0x2CB7BA9030B932903737BA1030903437B63232B9"
+    },
+    "310": {
+      "op": "PUSH1",
+      "value": "0x61"
+    },
+    "312": {
+      "op": "SHL"
+    },
+    "313": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "315": {
+      "op": "DUP3"
+    },
+    "316": {
+      "op": "ADD"
+    },
+    "317": {
+      "op": "MSTORE"
+    },
+    "318": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "320": {
+      "op": "ADD"
+    },
+    "321": {
+      "offset": [
+        265,
+        332
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "322": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "324": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "325": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "326": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "SWAP2",
+      "path": "1"
+    },
+    "327": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "SUB",
+      "path": "1"
+    },
+    "328": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "329": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "REVERT",
+      "path": "1"
+    },
+    "330": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        265,
+        332
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "331": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        633,
+        640
+      ],
+      "op": "PUSH8",
+      "path": "1",
+      "statement": 0,
+      "value": "0xDE0B6B3A7640000"
+    },
+    "340": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        608,
+        629
+      ],
+      "op": "SELFBALANCE",
+      "path": "1"
+    },
+    "341": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        608,
+        640
+      ],
+      "op": "LT",
+      "path": "1"
+    },
+    "342": {
+      "branch": 4,
+      "fn": "Rewarder.reward",
+      "offset": [
+        608,
+        640
+      ],
+      "op": "ISZERO",
+      "path": "1"
+    },
+    "343": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x195"
+    },
+    "346": {
+      "branch": 4,
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "347": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "349": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "350": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "354": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "356": {
+      "op": "SHL"
+    },
+    "357": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "358": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "359": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "361": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x4"
+    },
+    "363": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "DUP3",
+      "path": "1"
+    },
+    "364": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "ADD",
+      "path": "1"
+    },
+    "365": {
+      "op": "MSTORE"
+    },
+    "366": {
+      "op": "PUSH1",
+      "value": "0x10"
+    },
+    "368": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "370": {
+      "op": "DUP3"
+    },
+    "371": {
+      "op": "ADD"
+    },
+    "372": {
+      "op": "MSTORE"
+    },
+    "373": {
+      "op": "PUSH16",
+      "value": "0x3737BA1032B737BAB3B41032BA3432B9"
+    },
+    "390": {
+      "op": "PUSH1",
+      "value": "0x81"
+    },
+    "392": {
+      "op": "SHL"
+    },
+    "393": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "395": {
+      "op": "DUP3"
+    },
+    "396": {
+      "op": "ADD"
+    },
+    "397": {
+      "op": "MSTORE"
+    },
+    "398": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "400": {
+      "op": "ADD"
+    },
+    "401": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x141"
+    },
+    "404": {
+      "op": "JUMP"
+    },
+    "405": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        600,
+        661
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "406": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "statement": 1,
+      "value": "0x40"
+    },
+    "408": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "409": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "410": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        685,
+        695
+      ],
+      "op": "CALLER",
+      "path": "1"
+    },
+    "411": {
+      "op": "DUP2"
+    },
+    "412": {
+      "op": "MSTORE"
+    },
+    "413": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        697,
+        704
+      ],
+      "op": "PUSH8",
+      "path": "1",
+      "value": "0xDE0B6B3A7640000"
+    },
+    "422": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "424": {
+      "op": "DUP3"
+    },
+    "425": {
+      "op": "ADD"
+    },
+    "426": {
+      "op": "MSTORE"
+    },
+    "427": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "PUSH32",
+      "path": "1",
+      "value": "0x8BC804330CCB1F29047EB908A8C527B762C6376B152B9B0092C0B9834B5E0C6C"
+    },
+    "460": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "SWAP2",
+      "path": "1"
+    },
+    "461": {
+      "op": "ADD"
+    },
+    "462": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "464": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "465": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "466": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "SWAP2",
+      "path": "1"
+    },
+    "467": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "SUB",
+      "path": "1"
+    },
+    "468": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "469": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        676,
+        705
+      ],
+      "op": "LOG1",
+      "path": "1"
+    },
+    "470": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "statement": 2,
+      "value": "0x40"
+    },
+    "472": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "473": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        724,
+        734
+      ],
+      "op": "CALLER",
+      "path": "1"
+    },
+    "474": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        724,
+        734
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "475": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "477": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "478": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        745,
+        752
+      ],
+      "op": "PUSH8",
+      "path": "1",
+      "value": "0xDE0B6B3A7640000"
+    },
+    "487": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        745,
+        752
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "488": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "DUP3",
+      "path": "1"
+    },
+    "489": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "490": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "491": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "492": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        745,
+        752
+      ],
+      "op": "DUP6",
+      "path": "1"
+    },
+    "493": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        724,
+        734
+      ],
+      "op": "DUP9",
+      "path": "1"
+    },
+    "494": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "DUP4",
+      "path": "1"
+    },
+    "495": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "CALL",
+      "path": "1"
+    },
+    "496": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "SWAP4",
+      "path": "1"
+    },
+    "497": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "498": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "499": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "500": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "501": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "ISZERO",
+      "path": "1"
+    },
+    "502": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "503": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "ISZERO",
+      "path": "1"
+    },
+    "504": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "PUSH2",
+      "path": "1",
+      "value": "0x205"
+    },
+    "507": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "508": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "1"
+    },
+    "509": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "511": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "512": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "1"
+    },
+    "513": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "1"
+    },
+    "514": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "516": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "REVERT",
+      "path": "1"
+    },
+    "517": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "518": {
+      "fn": "Rewarder.reward",
+      "offset": [
+        716,
+        753
+      ],
+      "op": "POP",
+      "path": "1"
+    },
+    "519": {
+      "fn": "Rewarder.reward",
+      "jump": "o",
+      "offset": [
+        553,
+        761
+      ],
+      "op": "JUMP",
+      "path": "1"
+    },
+    "520": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        455,
+        543
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "521": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "statement": 3,
+      "value": "0x40"
+    },
+    "523": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "524": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        526,
+        535
+      ],
+      "op": "CALLVALUE",
+      "path": "1"
+    },
+    "525": {
+      "op": "DUP2"
+    },
+    "526": {
+      "op": "MSTORE"
+    },
+    "527": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        514,
+        524
+      ],
+      "op": "CALLER",
+      "path": "1"
+    },
+    "528": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        514,
+        524
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "529": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "PUSH32",
+      "path": "1",
+      "value": "0x2DA466A7B24304F47E87FA2E1E5A81B9831CE54FEC19055CE277CA2F39BA42C4"
+    },
+    "562": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "563": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "565": {
+      "op": "ADD"
+    },
+    "566": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "568": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "569": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "570": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "SWAP2",
+      "path": "1"
+    },
+    "571": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "SUB",
+      "path": "1"
+    },
+    "572": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "573": {
+      "fn": "Rewarder.deposit",
+      "offset": [
+        504,
+        536
+      ],
+      "op": "LOG2",
+      "path": "1"
+    },
+    "574": {
+      "fn": "Rewarder.deposit",
+      "jump": "o",
+      "offset": [
+        455,
+        543
+      ],
+      "op": "JUMP",
+      "path": "1"
+    },
+    "575": {
+      "op": "JUMPDEST"
+    },
+    "576": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "578": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "580": {
+      "op": "DUP3"
+    },
+    "581": {
+      "op": "DUP5"
+    },
+    "582": {
+      "op": "SUB"
+    },
+    "583": {
+      "op": "SLT"
+    },
+    "584": {
+      "op": "ISZERO"
+    },
+    "585": {
+      "op": "PUSH2",
+      "value": "0x251"
+    },
+    "588": {
+      "op": "JUMPI"
+    },
+    "589": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "591": {
+      "op": "DUP1"
+    },
+    "592": {
+      "op": "REVERT"
+    },
+    "593": {
+      "op": "JUMPDEST"
+    },
+    "594": {
+      "op": "POP"
+    },
+    "595": {
+      "op": "MLOAD"
+    },
+    "596": {
+      "op": "SWAP2"
+    },
+    "597": {
+      "op": "SWAP1"
+    },
+    "598": {
+      "op": "POP"
+    },
+    "599": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "f9b17b6a17a424312ff9e1ccd868f3c50406a5fc",
+  "source": "pragma solidity ^0.8.0;\n\nimport \"../interfaces/IERC20.sol\";\n\ncontract Rewarder {\n\n\n    IERC20 public GoodToken;\n    event Deposited(address indexed payee, uint256 weiAmount);\n    event Rewarder(address receiver, uint256 amount);\n\n    modifier OnlyHolders {\n        require(GoodToken.balanceOf(msg.sender)> 0, \"You are not a holder\");\n        _;\n    }\n \n    constructor (address tokenAddress) public {\n        GoodToken = IERC20(tokenAddress);\n    }\n\n\n    function deposit() public payable {\n        emit Deposited(msg.sender, msg.value);\n    }\n    \n    function reward() public OnlyHolders {\n        require(address(this).balance >= 1 ether, \"not enough ether\");\n        emit Rewarder(msg.sender, 1 ether);\n\n        payable(msg.sender).transfer(1 ether);\n\n    }\n\n}",
+  "sourceMap": "61:703:1:-:0;;;357:91;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;409:9;:32;;-1:-1:-1;;;;;;409:32:1;-1:-1:-1;;;;;409:32:1;;;;;;;;;;61:703;;14:290:3;84:6;137:2;125:9;116:7;112:23;108:32;105:52;;;153:1;150;143:12;105:52;179:16;;-1:-1:-1;;;;;224:31:3;;214:42;;204:70;;270:1;267;260:12;204:70;293:5;14:290;-1:-1:-1;;;14:290:3:o;:::-;61:703:1;;;;;;",
+  "sourcePath": "contracts/reward.sol",
+  "type": "contract"
+}

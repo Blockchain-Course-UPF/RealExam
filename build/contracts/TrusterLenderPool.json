@@ -1,0 +1,6303 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "GoodToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "borrowAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "flashLoan",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "2": "contracts/truster.sol",
+    "3": "interfaces/IERC20.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/truster.sol",
+    "exportedSymbols": {
+      "IERC20": [
+        260
+      ],
+      "TrusterLenderPool": [
+        102
+      ]
+    },
+    "id": 103,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 15,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "interfaces/IERC20.sol",
+        "file": "../interfaces/IERC20.sol",
+        "id": 16,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 103,
+        "sourceUnit": 261,
+        "src": "25:34:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "TrusterLenderPool",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 102,
+        "linearizedBaseContracts": [
+          102
+        ],
+        "name": "TrusterLenderPool",
+        "nameLocation": "70:17:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "cb94332b",
+            "id": 19,
+            "mutability": "mutable",
+            "name": "GoodToken",
+            "nameLocation": "110:9:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 102,
+            "src": "96:23:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20_$260",
+              "typeString": "contract IERC20"
+            },
+            "typeName": {
+              "id": 18,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 17,
+                "name": "IERC20",
+                "nameLocations": [
+                  "96:6:2"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 260,
+                "src": "96:6:2"
+              },
+              "referencedDeclaration": 260,
+              "src": "96:6:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20_$260",
+                "typeString": "contract IERC20"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 30,
+              "nodeType": "Block",
+              "src": "168:49:2",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 28,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 24,
+                      "name": "GoodToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19,
+                      "src": "178:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$260",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 26,
+                          "name": "tokenAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 21,
+                          "src": "197:12:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 25,
+                        "name": "IERC20",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 260,
+                        "src": "190:6:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IERC20_$260_$",
+                          "typeString": "type(contract IERC20)"
+                        }
+                      },
+                      "id": 27,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "190:20:2",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$260",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "src": "178:32:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$260",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "id": 29,
+                  "nodeType": "ExpressionStatement",
+                  "src": "178:32:2"
+                }
+              ]
+            },
+            "id": 31,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21,
+                  "mutability": "mutable",
+                  "name": "tokenAddress",
+                  "nameLocation": "147:12:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 31,
+                  "src": "139:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "139:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "138:22:2"
+            },
+            "returnParameters": {
+              "id": 23,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "168:0:2"
+            },
+            "scope": 102,
+            "src": "126:91:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 100,
+              "nodeType": "Block",
+              "src": "352:515:2",
+              "statements": [
+                {
+                  "assignments": [
+                    41
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 41,
+                      "mutability": "mutable",
+                      "name": "balanceBefore",
+                      "nameLocation": "370:13:2",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 100,
+                      "src": "362:21:2",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 40,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "362:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 49,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 46,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -28,
+                            "src": "414:4:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_TrusterLenderPool_$102",
+                              "typeString": "contract TrusterLenderPool"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_TrusterLenderPool_$102",
+                              "typeString": "contract TrusterLenderPool"
+                            }
+                          ],
+                          "id": 45,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "406:7:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 44,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "406:7:2",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 47,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "406:13:2",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "id": 42,
+                        "name": "GoodToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 19,
+                        "src": "386:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC20_$260",
+                          "typeString": "contract IERC20"
+                        }
+                      },
+                      "id": 43,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "396:9:2",
+                      "memberName": "balanceOf",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 205,
+                      "src": "386:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) view external returns (uint256)"
+                      }
+                    },
+                    "id": 48,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "386:34:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "362:58:2"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 53,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 51,
+                          "name": "balanceBefore",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 41,
+                          "src": "439:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "id": 52,
+                          "name": "borrowAmount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 33,
+                          "src": "456:12:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "439:29:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "4e6f7420656e6f75676820746f6b656e7320696e20706f6f6c",
+                        "id": 54,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "470:27:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_b72faba0f3ce88ebe3c1e74158cb85235f15025c6f49bcf2ffc16e426ffab345",
+                          "typeString": "literal_string \"Not enough tokens in pool\""
+                        },
+                        "value": "Not enough tokens in pool"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_b72faba0f3ce88ebe3c1e74158cb85235f15025c6f49bcf2ffc16e426ffab345",
+                          "typeString": "literal_string \"Not enough tokens in pool\""
+                        }
+                      ],
+                      "id": 50,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "431:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 55,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "431:67:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 56,
+                  "nodeType": "ExpressionStatement",
+                  "src": "431:67:2"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 60,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 58,
+                          "name": "borrowAmount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 33,
+                          "src": "516:12:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "hexValue": "30",
+                          "id": 59,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "529:1:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "516:14:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "426f72726f77206d6f7265207468616e2030",
+                        "id": 61,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "532:20:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_3e838cd76e10bf2a13a39c306a18f10b115a207933f8c360879b2ecafd21cf4e",
+                          "typeString": "literal_string \"Borrow more than 0\""
+                        },
+                        "value": "Borrow more than 0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_3e838cd76e10bf2a13a39c306a18f10b115a207933f8c360879b2ecafd21cf4e",
+                          "typeString": "literal_string \"Borrow more than 0\""
+                        }
+                      ],
+                      "id": 57,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "508:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 62,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "508:45:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 63,
+                  "nodeType": "ExpressionStatement",
+                  "src": "508:45:2"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 67,
+                        "name": "target",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35,
+                        "src": "591:6:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 68,
+                        "name": "borrowAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33,
+                        "src": "599:12:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 64,
+                        "name": "GoodToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 19,
+                        "src": "572:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC20_$260",
+                          "typeString": "contract IERC20"
+                        }
+                      },
+                      "id": 66,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "582:8:2",
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 214,
+                      "src": "572:18:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 69,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "572:40:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 70,
+                  "nodeType": "ExpressionStatement",
+                  "src": "572:40:2"
+                },
+                {
+                  "assignments": [
+                    72,
+                    null
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 72,
+                      "mutability": "mutable",
+                      "name": "success",
+                      "nameLocation": "628:7:2",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 100,
+                      "src": "623:12:2",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 71,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "623:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    null
+                  ],
+                  "id": 77,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 75,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 37,
+                        "src": "653:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      ],
+                      "expression": {
+                        "id": 73,
+                        "name": "target",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35,
+                        "src": "641:6:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 74,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "648:4:2",
+                      "memberName": "call",
+                      "nodeType": "MemberAccess",
+                      "src": "641:11:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
+                        "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
+                      }
+                    },
+                    "id": 76,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "641:17:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(bool,bytes memory)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "622:36:2"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 79,
+                        "name": "success",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 72,
+                        "src": "676:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "45787465726e616c2063616c6c206661696c6564",
+                        "id": 80,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "685:22:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9f4bd06b89321bc3f783fb04fb42cce395a08f7ff4ca20605c7ae8a2fa5840ec",
+                          "typeString": "literal_string \"External call failed\""
+                        },
+                        "value": "External call failed"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9f4bd06b89321bc3f783fb04fb42cce395a08f7ff4ca20605c7ae8a2fa5840ec",
+                          "typeString": "literal_string \"External call failed\""
+                        }
+                      ],
+                      "id": 78,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "668:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 81,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "668:40:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 82,
+                  "nodeType": "ExpressionStatement",
+                  "src": "668:40:2"
+                },
+                {
+                  "assignments": [
+                    84
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 84,
+                      "mutability": "mutable",
+                      "name": "balanceAfter",
+                      "nameLocation": "727:12:2",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 100,
+                      "src": "719:20:2",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 83,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "719:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 92,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 89,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -28,
+                            "src": "770:4:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_TrusterLenderPool_$102",
+                              "typeString": "contract TrusterLenderPool"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_TrusterLenderPool_$102",
+                              "typeString": "contract TrusterLenderPool"
+                            }
+                          ],
+                          "id": 88,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "762:7:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 87,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "762:7:2",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 90,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "762:13:2",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "id": 85,
+                        "name": "GoodToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 19,
+                        "src": "742:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC20_$260",
+                          "typeString": "contract IERC20"
+                        }
+                      },
+                      "id": 86,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "752:9:2",
+                      "memberName": "balanceOf",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 205,
+                      "src": "742:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) view external returns (uint256)"
+                      }
+                    },
+                    "id": 91,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "742:34:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "719:57:2"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 96,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 94,
+                          "name": "balanceAfter",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 84,
+                          "src": "794:12:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "id": 95,
+                          "name": "balanceBefore",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 41,
+                          "src": "810:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "794:29:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "466c617368206c6f616e206861736e2774206265656e2070616964206261636b",
+                        "id": 97,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "825:34:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_1dae86046d00ebb5aaf7f545a363e81af36c36f80fbd4f1805487455c218a2ab",
+                          "typeString": "literal_string \"Flash loan hasn't been paid back\""
+                        },
+                        "value": "Flash loan hasn't been paid back"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_1dae86046d00ebb5aaf7f545a363e81af36c36f80fbd4f1805487455c218a2ab",
+                          "typeString": "literal_string \"Flash loan hasn't been paid back\""
+                        }
+                      ],
+                      "id": 93,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "786:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 98,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "786:74:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 99,
+                  "nodeType": "ExpressionStatement",
+                  "src": "786:74:2"
+                }
+              ]
+            },
+            "functionSelector": "2bd94e9c",
+            "id": 101,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flashLoan",
+            "nameLocation": "232:9:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 38,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33,
+                  "mutability": "mutable",
+                  "name": "borrowAmount",
+                  "nameLocation": "259:12:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 101,
+                  "src": "251:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "251:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35,
+                  "mutability": "mutable",
+                  "name": "target",
+                  "nameLocation": "289:6:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 101,
+                  "src": "281:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "281:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 37,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "320:4:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 101,
+                  "src": "305:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 36,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "305:5:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "241:89:2"
+            },
+            "returnParameters": {
+              "id": 39,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "352:0:2"
+            },
+            "scope": 102,
+            "src": "223:644:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 103,
+        "src": "61:809:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:870:2"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5060405161051e38038061051e83398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b61048b806100936000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80632bd94e9c1461003b578063cb94332b14610050575b600080fd5b61004e61004936600461036e565b61007f565b005b600054610063906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b600080546040516370a0823160e01b81523060048201526001600160a01b03909116906370a0823190602401602060405180830381865afa1580156100c8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100ec9190610403565b9050848110156101435760405162461bcd60e51b815260206004820152601960248201527f4e6f7420656e6f75676820746f6b656e7320696e20706f6f6c0000000000000060448201526064015b60405180910390fd5b600085116101885760405162461bcd60e51b81526020600482015260126024820152710426f72726f77206d6f7265207468616e20360741b604482015260640161013a565b60005460405163a9059cbb60e01b81526001600160a01b038681166004830152602482018890529091169063a9059cbb906044016020604051808303816000875af11580156101db573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101ff919061041c565b506000846001600160a01b0316848460405161021c929190610445565b6000604051808303816000865af19150503d8060008114610259576040519150601f19603f3d011682016040523d82523d6000602084013e61025e565b606091505b50509050806102a65760405162461bcd60e51b8152602060048201526014602482015273115e1d195c9b985b0818d85b1b0819985a5b195960621b604482015260640161013a565b600080546040516370a0823160e01b81523060048201526001600160a01b03909116906370a0823190602401602060405180830381865afa1580156102ef573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103139190610403565b9050828110156103655760405162461bcd60e51b815260206004820181905260248201527f466c617368206c6f616e206861736e2774206265656e2070616964206261636b604482015260640161013a565b50505050505050565b6000806000806060858703121561038457600080fd5b8435935060208501356001600160a01b03811681146103a257600080fd5b9250604085013567ffffffffffffffff808211156103bf57600080fd5b818701915087601f8301126103d357600080fd5b8135818111156103e257600080fd5b8860208285010111156103f457600080fd5b95989497505060200194505050565b60006020828403121561041557600080fd5b5051919050565b60006020828403121561042e57600080fd5b8151801515811461043e57600080fd5b9392505050565b818382376000910190815291905056fea26469706673582212208b0301ccead65efadc7006fcf12b12a3858af0250028e128435a3efbacd15a3a64736f6c63430008100033",
+  "bytecodeSha1": "6d4b0c6748f5f4d48adeaa2064a094579f3ac717",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.16+commit.07a7930e"
+  },
+  "contractName": "TrusterLenderPool",
+  "coverageMap": {
+    "branches": {
+      "2": {
+        "TrusterLenderPool.flashLoan": {
+          "5": [
+            439,
+            468,
+            true
+          ],
+          "6": [
+            516,
+            530,
+            true
+          ],
+          "7": [
+            676,
+            683,
+            true
+          ],
+          "8": [
+            794,
+            823,
+            true
+          ]
+        }
+      },
+      "3": {}
+    },
+    "statements": {
+      "2": {
+        "TrusterLenderPool.flashLoan": {
+          "0": [
+            431,
+            498
+          ],
+          "1": [
+            508,
+            553
+          ],
+          "2": [
+            572,
+            612
+          ],
+          "3": [
+            668,
+            708
+          ],
+          "4": [
+            786,
+            860
+          ]
+        }
+      },
+      "3": {}
+    }
+  },
+  "dependencies": [
+    "IERC20"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100365760003560e01c80632bd94e9c1461003b578063cb94332b14610050575b600080fd5b61004e61004936600461036e565b61007f565b005b600054610063906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b600080546040516370a0823160e01b81523060048201526001600160a01b03909116906370a0823190602401602060405180830381865afa1580156100c8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100ec9190610403565b9050848110156101435760405162461bcd60e51b815260206004820152601960248201527f4e6f7420656e6f75676820746f6b656e7320696e20706f6f6c0000000000000060448201526064015b60405180910390fd5b600085116101885760405162461bcd60e51b81526020600482015260126024820152710426f72726f77206d6f7265207468616e20360741b604482015260640161013a565b60005460405163a9059cbb60e01b81526001600160a01b038681166004830152602482018890529091169063a9059cbb906044016020604051808303816000875af11580156101db573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101ff919061041c565b506000846001600160a01b0316848460405161021c929190610445565b6000604051808303816000865af19150503d8060008114610259576040519150601f19603f3d011682016040523d82523d6000602084013e61025e565b606091505b50509050806102a65760405162461bcd60e51b8152602060048201526014602482015273115e1d195c9b985b0818d85b1b0819985a5b195960621b604482015260640161013a565b600080546040516370a0823160e01b81523060048201526001600160a01b03909116906370a0823190602401602060405180830381865afa1580156102ef573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103139190610403565b9050828110156103655760405162461bcd60e51b815260206004820181905260248201527f466c617368206c6f616e206861736e2774206265656e2070616964206261636b604482015260640161013a565b50505050505050565b6000806000806060858703121561038457600080fd5b8435935060208501356001600160a01b03811681146103a257600080fd5b9250604085013567ffffffffffffffff808211156103bf57600080fd5b818701915087601f8301126103d357600080fd5b8135818111156103e257600080fd5b8860208285010111156103f457600080fd5b95989497505060200194505050565b60006020828403121561041557600080fd5b5051919050565b60006020828403121561042e57600080fd5b8151801515811461043e57600080fd5b9392505050565b818382376000910190815291905056fea26469706673582212208b0301ccead65efadc7006fcf12b12a3858af0250028e128435a3efbacd15a3a64736f6c63430008100033",
+  "deployedSourceMap": "61:809:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;223:644;;;;;;:::i;:::-;;:::i;:::-;;96:23;;;;;-1:-1:-1;;;;;96:23:2;;;;;;-1:-1:-1;;;;;1030:32:4;;;1012:51;;1000:2;985:18;96:23:2;;;;;;;223:644;362:21;386:9;;:34;;-1:-1:-1;;;386:34:2;;414:4;386:34;;;1012:51:4;-1:-1:-1;;;;;386:9:2;;;;:19;;985:18:4;;386:34:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;362:58;;456:12;439:13;:29;;431:67;;;;-1:-1:-1;;;431:67:2;;1673:2:4;431:67:2;;;1655:21:4;1712:2;1692:18;;;1685:30;1751:27;1731:18;;;1724:55;1796:18;;431:67:2;;;;;;;;;529:1;516:12;:14;508:45;;;;-1:-1:-1;;;508:45:2;;2027:2:4;508:45:2;;;2009:21:4;2066:2;2046:18;;;2039:30;-1:-1:-1;;;2085:18:4;;;2078:48;2143:18;;508:45:2;1825:342:4;508:45:2;572:9;;:40;;-1:-1:-1;;;572:40:2;;-1:-1:-1;;;;;2364:32:4;;;572:40:2;;;2346:51:4;2413:18;;;2406:34;;;572:9:2;;;;:18;;2319::4;;572:40:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;623:12;641:6;-1:-1:-1;;;;;641:11:2;653:4;;641:17;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;622:36;;;676:7;668:40;;;;-1:-1:-1;;;668:40:2;;3211:2:4;668:40:2;;;3193:21:4;3250:2;3230:18;;;3223:30;-1:-1:-1;;;3269:18:4;;;3262:50;3329:18;;668:40:2;3009:344:4;668:40:2;719:20;742:9;;:34;;-1:-1:-1;;;742:34:2;;770:4;742:34;;;1012:51:4;-1:-1:-1;;;;;742:9:2;;;;:19;;985:18:4;;742:34:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;719:57;;810:13;794:12;:29;;786:74;;;;-1:-1:-1;;;786:74:2;;3560:2:4;786:74:2;;;3542:21:4;;;3579:18;;;3572:30;3638:34;3618:18;;;3611:62;3690:18;;786:74:2;3358:356:4;786:74:2;352:515;;;223:644;;;;:::o;14:833:4:-;102:6;110;118;126;179:2;167:9;158:7;154:23;150:32;147:52;;;195:1;192;185:12;147:52;218:23;;;-1:-1:-1;291:2:4;276:18;;263:32;-1:-1:-1;;;;;324:31:4;;314:42;;304:70;;370:1;367;360:12;304:70;393:5;-1:-1:-1;449:2:4;434:18;;421:32;472:18;502:14;;;499:34;;;529:1;526;519:12;499:34;567:6;556:9;552:22;542:32;;612:7;605:4;601:2;597:13;593:27;583:55;;634:1;631;624:12;583:55;674:2;661:16;700:2;692:6;689:14;686:34;;;716:1;713;706:12;686:34;761:7;756:2;747:6;743:2;739:15;735:24;732:37;729:57;;;782:1;779;772:12;729:57;14:833;;;;-1:-1:-1;;813:2:4;805:11;;-1:-1:-1;;;14:833:4:o;1282:184::-;1352:6;1405:2;1393:9;1384:7;1380:23;1376:32;1373:52;;;1421:1;1418;1411:12;1373:52;-1:-1:-1;1444:16:4;;1282:184;-1:-1:-1;1282:184:4:o;2451:277::-;2518:6;2571:2;2559:9;2550:7;2546:23;2542:32;2539:52;;;2587:1;2584;2577:12;2539:52;2619:9;2613:16;2672:5;2665:13;2658:21;2651:5;2648:32;2638:60;;2694:1;2691;2684:12;2638:60;2717:5;2451:277;-1:-1:-1;;;2451:277:4:o;2733:271::-;2916:6;2908;2903:3;2890:33;2872:3;2942:16;;2967:13;;;2942:16;2733:271;-1:-1:-1;2733:271:4:o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    61,
+    870
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x36 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x2BD94E9C EQ PUSH2 0x3B JUMPI DUP1 PUSH4 0xCB94332B EQ PUSH2 0x50 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x4E PUSH2 0x49 CALLDATASIZE PUSH1 0x4 PUSH2 0x36E JUMP JUMPDEST PUSH2 0x7F JUMP JUMPDEST STOP JUMPDEST PUSH1 0x0 SLOAD PUSH2 0x63 SWAP1 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x40 MLOAD PUSH4 0x70A08231 PUSH1 0xE0 SHL DUP2 MSTORE ADDRESS PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND SWAP1 PUSH4 0x70A08231 SWAP1 PUSH1 0x24 ADD PUSH1 0x20 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 DUP7 GAS STATICCALL ISZERO DUP1 ISZERO PUSH2 0xC8 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP PUSH1 0x40 MLOAD RETURNDATASIZE PUSH1 0x1F NOT PUSH1 0x1F DUP3 ADD AND DUP3 ADD DUP1 PUSH1 0x40 MSTORE POP DUP2 ADD SWAP1 PUSH2 0xEC SWAP2 SWAP1 PUSH2 0x403 JUMP JUMPDEST SWAP1 POP DUP5 DUP2 LT ISZERO PUSH2 0x143 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x19 PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x4E6F7420656E6F75676820746F6B656E7320696E20706F6F6C00000000000000 PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 REVERT JUMPDEST PUSH1 0x0 DUP6 GT PUSH2 0x188 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x12 PUSH1 0x24 DUP3 ADD MSTORE PUSH18 0x426F72726F77206D6F7265207468616E203 PUSH1 0x74 SHL PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD PUSH2 0x13A JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x40 MLOAD PUSH4 0xA9059CBB PUSH1 0xE0 SHL DUP2 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP7 DUP2 AND PUSH1 0x4 DUP4 ADD MSTORE PUSH1 0x24 DUP3 ADD DUP9 SWAP1 MSTORE SWAP1 SWAP2 AND SWAP1 PUSH4 0xA9059CBB SWAP1 PUSH1 0x44 ADD PUSH1 0x20 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP8 GAS CALL ISZERO DUP1 ISZERO PUSH2 0x1DB JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP PUSH1 0x40 MLOAD RETURNDATASIZE PUSH1 0x1F NOT PUSH1 0x1F DUP3 ADD AND DUP3 ADD DUP1 PUSH1 0x40 MSTORE POP DUP2 ADD SWAP1 PUSH2 0x1FF SWAP2 SWAP1 PUSH2 0x41C JUMP JUMPDEST POP PUSH1 0x0 DUP5 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP5 DUP5 PUSH1 0x40 MLOAD PUSH2 0x21C SWAP3 SWAP2 SWAP1 PUSH2 0x445 JUMP JUMPDEST PUSH1 0x0 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP7 GAS CALL SWAP2 POP POP RETURNDATASIZE DUP1 PUSH1 0x0 DUP2 EQ PUSH2 0x259 JUMPI PUSH1 0x40 MLOAD SWAP2 POP PUSH1 0x1F NOT PUSH1 0x3F RETURNDATASIZE ADD AND DUP3 ADD PUSH1 0x40 MSTORE RETURNDATASIZE DUP3 MSTORE RETURNDATASIZE PUSH1 0x0 PUSH1 0x20 DUP5 ADD RETURNDATACOPY PUSH2 0x25E JUMP JUMPDEST PUSH1 0x60 SWAP2 POP JUMPDEST POP POP SWAP1 POP DUP1 PUSH2 0x2A6 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x14 PUSH1 0x24 DUP3 ADD MSTORE PUSH20 0x115E1D195C9B985B0818D85B1B0819985A5B1959 PUSH1 0x62 SHL PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD PUSH2 0x13A JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x40 MLOAD PUSH4 0x70A08231 PUSH1 0xE0 SHL DUP2 MSTORE ADDRESS PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND SWAP1 PUSH4 0x70A08231 SWAP1 PUSH1 0x24 ADD PUSH1 0x20 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 DUP7 GAS STATICCALL ISZERO DUP1 ISZERO PUSH2 0x2EF JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP PUSH1 0x40 MLOAD RETURNDATASIZE PUSH1 0x1F NOT PUSH1 0x1F DUP3 ADD AND DUP3 ADD DUP1 PUSH1 0x40 MSTORE POP DUP2 ADD SWAP1 PUSH2 0x313 SWAP2 SWAP1 PUSH2 0x403 JUMP JUMPDEST SWAP1 POP DUP3 DUP2 LT ISZERO PUSH2 0x365 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD DUP2 SWAP1 MSTORE PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x466C617368206C6F616E206861736E2774206265656E2070616964206261636B PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD PUSH2 0x13A JUMP JUMPDEST POP POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x60 DUP6 DUP8 SUB SLT ISZERO PUSH2 0x384 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP5 CALLDATALOAD SWAP4 POP PUSH1 0x20 DUP6 ADD CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND DUP2 EQ PUSH2 0x3A2 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP3 POP PUSH1 0x40 DUP6 ADD CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x3BF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 DUP8 ADD SWAP2 POP DUP8 PUSH1 0x1F DUP4 ADD SLT PUSH2 0x3D3 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 CALLDATALOAD DUP2 DUP2 GT ISZERO PUSH2 0x3E2 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP9 PUSH1 0x20 DUP3 DUP6 ADD ADD GT ISZERO PUSH2 0x3F4 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP6 SWAP9 SWAP5 SWAP8 POP POP PUSH1 0x20 ADD SWAP5 POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x415 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP MLOAD SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x42E JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 MLOAD DUP1 ISZERO ISZERO DUP2 EQ PUSH2 0x43E JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST DUP2 DUP4 DUP3 CALLDATACOPY PUSH1 0x0 SWAP2 ADD SWAP1 DUP2 MSTORE SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP12 SUB ADD 0xCC 0xEA 0xD6 0x5E STATICCALL 0xDC PUSH17 0x6FCF12B12A3858AF0250028E128435A3E 0xFB 0xAC 0xD1 GAS GASPRICE PUSH5 0x736F6C6343 STOP ADDMOD LT STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "CALLVALUE",
+      "path": "2"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "CALLDATASIZE",
+      "path": "2"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "LT",
+      "path": "2"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x36"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "CALLDATALOAD",
+      "path": "2"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "SHR",
+      "path": "2"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x2BD94E9C"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x3B"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0xCB94332B"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x50"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "57": {
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "58": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        61,
+        870
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "59": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "60": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x4E"
+    },
+    "63": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x49"
+    },
+    "66": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "CALLDATASIZE",
+      "path": "2"
+    },
+    "67": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "69": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x36E"
+    },
+    "72": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "jump": "i",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "73": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "74": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x7F"
+    },
+    "77": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "jump": "i",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "78": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "79": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "STOP",
+      "path": "2"
+    },
+    "80": {
+      "offset": [
+        96,
+        119
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "81": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "83": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "84": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x63"
+    },
+    "87": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "88": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "90": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "92": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "94": {
+      "op": "SHL"
+    },
+    "95": {
+      "op": "SUB"
+    },
+    "96": {
+      "offset": [
+        96,
+        119
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "97": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "98": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "99": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "100": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "102": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "103": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "105": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "107": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "109": {
+      "op": "SHL"
+    },
+    "110": {
+      "op": "SUB"
+    },
+    "111": {
+      "op": "SWAP1"
+    },
+    "112": {
+      "op": "SWAP2"
+    },
+    "113": {
+      "op": "AND"
+    },
+    "114": {
+      "op": "DUP2"
+    },
+    "115": {
+      "op": "MSTORE"
+    },
+    "116": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "118": {
+      "op": "ADD"
+    },
+    "119": {
+      "offset": [
+        96,
+        119
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "121": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "122": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "123": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "124": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "125": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "126": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        96,
+        119
+      ],
+      "op": "RETURN",
+      "path": "2"
+    },
+    "127": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "128": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        362,
+        383
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "130": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        395
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "131": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        395
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "132": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "134": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "135": {
+      "op": "PUSH4",
+      "value": "0x70A08231"
+    },
+    "140": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "142": {
+      "op": "SHL"
+    },
+    "143": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "144": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "145": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        414,
+        418
+      ],
+      "op": "ADDRESS",
+      "path": "2"
+    },
+    "146": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "148": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "149": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "150": {
+      "op": "MSTORE"
+    },
+    "151": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "153": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "155": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "157": {
+      "op": "SHL"
+    },
+    "158": {
+      "op": "SUB"
+    },
+    "159": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        395
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "160": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        395
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "161": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        395
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "162": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        395
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "163": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        405
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x70A08231"
+    },
+    "168": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        405
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "169": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "171": {
+      "op": "ADD"
+    },
+    "172": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x20"
+    },
+    "174": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "176": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "177": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "178": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP4",
+      "path": "2"
+    },
+    "179": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "180": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "181": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP7",
+      "path": "2"
+    },
+    "182": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "GAS",
+      "path": "2"
+    },
+    "183": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "STATICCALL",
+      "path": "2"
+    },
+    "184": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "185": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "186": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "187": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xC8"
+    },
+    "190": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "191": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "192": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "194": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "195": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "2"
+    },
+    "196": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "197": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "199": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "200": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "201": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "202": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "203": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "204": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "205": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "207": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "208": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "209": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x1F"
+    },
+    "211": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "NOT",
+      "path": "2"
+    },
+    "212": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x1F"
+    },
+    "214": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "215": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "216": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "217": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "218": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "219": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "220": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "222": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "223": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "224": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "225": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "226": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "227": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xEC"
+    },
+    "230": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "231": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "232": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x403"
+    },
+    "235": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "jump": "i",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "236": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        386,
+        420
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "237": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        362,
+        420
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "238": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        362,
+        420
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "239": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        456,
+        468
+      ],
+      "op": "DUP5",
+      "path": "2",
+      "statement": 0
+    },
+    "240": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        439,
+        452
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "241": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        439,
+        468
+      ],
+      "op": "LT",
+      "path": "2"
+    },
+    "242": {
+      "branch": 5,
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        439,
+        468
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "243": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x143"
+    },
+    "246": {
+      "branch": 5,
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "247": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "249": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "250": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "254": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "256": {
+      "op": "SHL"
+    },
+    "257": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "258": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "259": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "261": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "263": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "264": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "265": {
+      "op": "MSTORE"
+    },
+    "266": {
+      "op": "PUSH1",
+      "value": "0x19"
+    },
+    "268": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "270": {
+      "op": "DUP3"
+    },
+    "271": {
+      "op": "ADD"
+    },
+    "272": {
+      "op": "MSTORE"
+    },
+    "273": {
+      "op": "PUSH32",
+      "value": "0x4E6F7420656E6F75676820746F6B656E7320696E20706F6F6C00000000000000"
+    },
+    "306": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "308": {
+      "op": "DUP3"
+    },
+    "309": {
+      "op": "ADD"
+    },
+    "310": {
+      "op": "MSTORE"
+    },
+    "311": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "313": {
+      "op": "ADD"
+    },
+    "314": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "315": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "317": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "318": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "319": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "320": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "321": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "322": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "REVERT",
+      "optimizer_revert": true,
+      "path": "2"
+    },
+    "323": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        431,
+        498
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "324": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        529,
+        530
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "statement": 1,
+      "value": "0x0"
+    },
+    "326": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        516,
+        528
+      ],
+      "op": "DUP6",
+      "path": "2"
+    },
+    "327": {
+      "branch": 6,
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        516,
+        530
+      ],
+      "op": "GT",
+      "path": "2"
+    },
+    "328": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x188"
+    },
+    "331": {
+      "branch": 6,
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "332": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "334": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "335": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "339": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "341": {
+      "op": "SHL"
+    },
+    "342": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "343": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "344": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "346": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "348": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "349": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "350": {
+      "op": "MSTORE"
+    },
+    "351": {
+      "op": "PUSH1",
+      "value": "0x12"
+    },
+    "353": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "355": {
+      "op": "DUP3"
+    },
+    "356": {
+      "op": "ADD"
+    },
+    "357": {
+      "op": "MSTORE"
+    },
+    "358": {
+      "op": "PUSH18",
+      "value": "0x426F72726F77206D6F7265207468616E203"
+    },
+    "377": {
+      "op": "PUSH1",
+      "value": "0x74"
+    },
+    "379": {
+      "op": "SHL"
+    },
+    "380": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "382": {
+      "op": "DUP3"
+    },
+    "383": {
+      "op": "ADD"
+    },
+    "384": {
+      "op": "MSTORE"
+    },
+    "385": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "387": {
+      "op": "ADD"
+    },
+    "388": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x13A"
+    },
+    "391": {
+      "op": "JUMP"
+    },
+    "392": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        508,
+        553
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "393": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        581
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "statement": 2,
+      "value": "0x0"
+    },
+    "395": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        581
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "396": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "398": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "399": {
+      "op": "PUSH4",
+      "value": "0xA9059CBB"
+    },
+    "404": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "406": {
+      "op": "SHL"
+    },
+    "407": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "408": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "409": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "411": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "413": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "415": {
+      "op": "SHL"
+    },
+    "416": {
+      "op": "SUB"
+    },
+    "417": {
+      "op": "DUP7"
+    },
+    "418": {
+      "op": "DUP2"
+    },
+    "419": {
+      "op": "AND"
+    },
+    "420": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "422": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP4",
+      "path": "2"
+    },
+    "423": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "424": {
+      "op": "MSTORE"
+    },
+    "425": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "427": {
+      "op": "DUP3"
+    },
+    "428": {
+      "op": "ADD"
+    },
+    "429": {
+      "op": "DUP9"
+    },
+    "430": {
+      "op": "SWAP1"
+    },
+    "431": {
+      "op": "MSTORE"
+    },
+    "432": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        581
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "433": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        581
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "434": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        581
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "435": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        581
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "436": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        590
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0xA9059CBB"
+    },
+    "441": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        590
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "442": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "444": {
+      "op": "ADD"
+    },
+    "445": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x20"
+    },
+    "447": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "449": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "450": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "451": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP4",
+      "path": "2"
+    },
+    "452": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "453": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "454": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "456": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP8",
+      "path": "2"
+    },
+    "457": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "GAS",
+      "path": "2"
+    },
+    "458": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "CALL",
+      "path": "2"
+    },
+    "459": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "460": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "461": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "462": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x1DB"
+    },
+    "465": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "466": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "467": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "469": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "470": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "2"
+    },
+    "471": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "472": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "474": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "475": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "476": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "477": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "478": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "479": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "480": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "482": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "483": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "484": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x1F"
+    },
+    "486": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "NOT",
+      "path": "2"
+    },
+    "487": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x1F"
+    },
+    "489": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "490": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "491": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "492": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "493": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "494": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "495": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "497": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "498": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "499": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "500": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "501": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "502": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x1FF"
+    },
+    "505": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "506": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "507": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x41C"
+    },
+    "510": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "jump": "i",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "511": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "512": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        572,
+        612
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "513": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        623,
+        635
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "515": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        647
+      ],
+      "op": "DUP5",
+      "path": "2"
+    },
+    "516": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "518": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "520": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "522": {
+      "op": "SHL"
+    },
+    "523": {
+      "op": "SUB"
+    },
+    "524": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        652
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "525": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        653,
+        657
+      ],
+      "op": "DUP5",
+      "path": "2"
+    },
+    "526": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        653,
+        657
+      ],
+      "op": "DUP5",
+      "path": "2"
+    },
+    "527": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "529": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "530": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x21C"
+    },
+    "533": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "SWAP3",
+      "path": "2"
+    },
+    "534": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "535": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "536": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x445"
+    },
+    "539": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "jump": "i",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "540": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "541": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "543": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "545": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "546": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "547": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "DUP4",
+      "path": "2"
+    },
+    "548": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "549": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "550": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "552": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "DUP7",
+      "path": "2"
+    },
+    "553": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "GAS",
+      "path": "2"
+    },
+    "554": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "CALL",
+      "path": "2"
+    },
+    "555": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "556": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "557": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "558": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "559": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "560": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "562": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "563": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "564": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x259"
+    },
+    "567": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "568": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "570": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "571": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "572": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "573": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x1F"
+    },
+    "575": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "NOT",
+      "path": "2"
+    },
+    "576": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x3F"
+    },
+    "578": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "579": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "580": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "581": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "582": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "583": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "585": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "586": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "587": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "588": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "589": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "590": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "592": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x20"
+    },
+    "594": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "DUP5",
+      "path": "2"
+    },
+    "595": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "596": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "2"
+    },
+    "597": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x25E"
+    },
+    "600": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "601": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "602": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x60"
+    },
+    "604": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "605": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "606": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "607": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        641,
+        658
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "608": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        622,
+        658
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "609": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        622,
+        658
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "610": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        622,
+        658
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "611": {
+      "branch": 7,
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        676,
+        683
+      ],
+      "op": "DUP1",
+      "path": "2",
+      "statement": 3
+    },
+    "612": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x2A6"
+    },
+    "615": {
+      "branch": 7,
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "616": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "618": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "619": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "623": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "625": {
+      "op": "SHL"
+    },
+    "626": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "627": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "628": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "630": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "632": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "633": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "634": {
+      "op": "MSTORE"
+    },
+    "635": {
+      "op": "PUSH1",
+      "value": "0x14"
+    },
+    "637": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "639": {
+      "op": "DUP3"
+    },
+    "640": {
+      "op": "ADD"
+    },
+    "641": {
+      "op": "MSTORE"
+    },
+    "642": {
+      "op": "PUSH20",
+      "value": "0x115E1D195C9B985B0818D85B1B0819985A5B1959"
+    },
+    "663": {
+      "op": "PUSH1",
+      "value": "0x62"
+    },
+    "665": {
+      "op": "SHL"
+    },
+    "666": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "668": {
+      "op": "DUP3"
+    },
+    "669": {
+      "op": "ADD"
+    },
+    "670": {
+      "op": "MSTORE"
+    },
+    "671": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "673": {
+      "op": "ADD"
+    },
+    "674": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x13A"
+    },
+    "677": {
+      "op": "JUMP"
+    },
+    "678": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        668,
+        708
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "679": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        719,
+        739
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "681": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        751
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "682": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        751
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "683": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "685": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "686": {
+      "op": "PUSH4",
+      "value": "0x70A08231"
+    },
+    "691": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "693": {
+      "op": "SHL"
+    },
+    "694": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "695": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "696": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        770,
+        774
+      ],
+      "op": "ADDRESS",
+      "path": "2"
+    },
+    "697": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "699": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "700": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "701": {
+      "op": "MSTORE"
+    },
+    "702": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "704": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "706": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "708": {
+      "op": "SHL"
+    },
+    "709": {
+      "op": "SUB"
+    },
+    "710": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        751
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "711": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        751
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "712": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        751
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "713": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        751
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "714": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        761
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x70A08231"
+    },
+    "719": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        761
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "720": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "722": {
+      "op": "ADD"
+    },
+    "723": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x20"
+    },
+    "725": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "727": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "728": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "729": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP4",
+      "path": "2"
+    },
+    "730": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "731": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "732": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP7",
+      "path": "2"
+    },
+    "733": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "GAS",
+      "path": "2"
+    },
+    "734": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "STATICCALL",
+      "path": "2"
+    },
+    "735": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "736": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "737": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "738": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x2EF"
+    },
+    "741": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "742": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "743": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "745": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "746": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "2"
+    },
+    "747": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "748": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "750": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "751": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "752": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "753": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "754": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "755": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "756": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "758": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "759": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "760": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x1F"
+    },
+    "762": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "NOT",
+      "path": "2"
+    },
+    "763": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x1F"
+    },
+    "765": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "766": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "767": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "768": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "769": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "770": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "771": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "773": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "774": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "775": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "776": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "777": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "778": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x313"
+    },
+    "781": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "782": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "783": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x403"
+    },
+    "786": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "jump": "i",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "787": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        742,
+        776
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "788": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        719,
+        776
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "789": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        719,
+        776
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "790": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        810,
+        823
+      ],
+      "op": "DUP3",
+      "path": "2",
+      "statement": 4
+    },
+    "791": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        794,
+        806
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "792": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        794,
+        823
+      ],
+      "op": "LT",
+      "path": "2"
+    },
+    "793": {
+      "branch": 8,
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        794,
+        823
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "794": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x365"
+    },
+    "797": {
+      "branch": 8,
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "798": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "800": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "801": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "805": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "807": {
+      "op": "SHL"
+    },
+    "808": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "809": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "810": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "812": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "814": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "815": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "816": {
+      "op": "DUP2"
+    },
+    "817": {
+      "op": "SWAP1"
+    },
+    "818": {
+      "op": "MSTORE"
+    },
+    "819": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "821": {
+      "op": "DUP3"
+    },
+    "822": {
+      "op": "ADD"
+    },
+    "823": {
+      "op": "MSTORE"
+    },
+    "824": {
+      "op": "PUSH32",
+      "value": "0x466C617368206C6F616E206861736E2774206265656E2070616964206261636B"
+    },
+    "857": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "859": {
+      "op": "DUP3"
+    },
+    "860": {
+      "op": "ADD"
+    },
+    "861": {
+      "op": "MSTORE"
+    },
+    "862": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "864": {
+      "op": "ADD"
+    },
+    "865": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x13A"
+    },
+    "868": {
+      "op": "JUMP"
+    },
+    "869": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        786,
+        860
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "870": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        352,
+        867
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "871": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        352,
+        867
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "872": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        352,
+        867
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "873": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "874": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "875": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "876": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "877": {
+      "fn": "TrusterLenderPool.flashLoan",
+      "jump": "o",
+      "offset": [
+        223,
+        867
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "878": {
+      "op": "JUMPDEST"
+    },
+    "879": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "881": {
+      "op": "DUP1"
+    },
+    "882": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "884": {
+      "op": "DUP1"
+    },
+    "885": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "887": {
+      "op": "DUP6"
+    },
+    "888": {
+      "op": "DUP8"
+    },
+    "889": {
+      "op": "SUB"
+    },
+    "890": {
+      "op": "SLT"
+    },
+    "891": {
+      "op": "ISZERO"
+    },
+    "892": {
+      "op": "PUSH2",
+      "value": "0x384"
+    },
+    "895": {
+      "op": "JUMPI"
+    },
+    "896": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "898": {
+      "op": "DUP1"
+    },
+    "899": {
+      "op": "REVERT"
+    },
+    "900": {
+      "op": "JUMPDEST"
+    },
+    "901": {
+      "op": "DUP5"
+    },
+    "902": {
+      "op": "CALLDATALOAD"
+    },
+    "903": {
+      "op": "SWAP4"
+    },
+    "904": {
+      "op": "POP"
+    },
+    "905": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "907": {
+      "op": "DUP6"
+    },
+    "908": {
+      "op": "ADD"
+    },
+    "909": {
+      "op": "CALLDATALOAD"
+    },
+    "910": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "912": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "914": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "916": {
+      "op": "SHL"
+    },
+    "917": {
+      "op": "SUB"
+    },
+    "918": {
+      "op": "DUP2"
+    },
+    "919": {
+      "op": "AND"
+    },
+    "920": {
+      "op": "DUP2"
+    },
+    "921": {
+      "op": "EQ"
+    },
+    "922": {
+      "op": "PUSH2",
+      "value": "0x3A2"
+    },
+    "925": {
+      "op": "JUMPI"
+    },
+    "926": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "928": {
+      "op": "DUP1"
+    },
+    "929": {
+      "op": "REVERT"
+    },
+    "930": {
+      "op": "JUMPDEST"
+    },
+    "931": {
+      "op": "SWAP3"
+    },
+    "932": {
+      "op": "POP"
+    },
+    "933": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "935": {
+      "op": "DUP6"
+    },
+    "936": {
+      "op": "ADD"
+    },
+    "937": {
+      "op": "CALLDATALOAD"
+    },
+    "938": {
+      "op": "PUSH8",
+      "value": "0xFFFFFFFFFFFFFFFF"
+    },
+    "947": {
+      "op": "DUP1"
+    },
+    "948": {
+      "op": "DUP3"
+    },
+    "949": {
+      "op": "GT"
+    },
+    "950": {
+      "op": "ISZERO"
+    },
+    "951": {
+      "op": "PUSH2",
+      "value": "0x3BF"
+    },
+    "954": {
+      "op": "JUMPI"
+    },
+    "955": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "957": {
+      "op": "DUP1"
+    },
+    "958": {
+      "op": "REVERT"
+    },
+    "959": {
+      "op": "JUMPDEST"
+    },
+    "960": {
+      "op": "DUP2"
+    },
+    "961": {
+      "op": "DUP8"
+    },
+    "962": {
+      "op": "ADD"
+    },
+    "963": {
+      "op": "SWAP2"
+    },
+    "964": {
+      "op": "POP"
+    },
+    "965": {
+      "op": "DUP8"
+    },
+    "966": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "968": {
+      "op": "DUP4"
+    },
+    "969": {
+      "op": "ADD"
+    },
+    "970": {
+      "op": "SLT"
+    },
+    "971": {
+      "op": "PUSH2",
+      "value": "0x3D3"
+    },
+    "974": {
+      "op": "JUMPI"
+    },
+    "975": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "977": {
+      "op": "DUP1"
+    },
+    "978": {
+      "op": "REVERT"
+    },
+    "979": {
+      "op": "JUMPDEST"
+    },
+    "980": {
+      "op": "DUP2"
+    },
+    "981": {
+      "op": "CALLDATALOAD"
+    },
+    "982": {
+      "op": "DUP2"
+    },
+    "983": {
+      "op": "DUP2"
+    },
+    "984": {
+      "op": "GT"
+    },
+    "985": {
+      "op": "ISZERO"
+    },
+    "986": {
+      "op": "PUSH2",
+      "value": "0x3E2"
+    },
+    "989": {
+      "op": "JUMPI"
+    },
+    "990": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "992": {
+      "op": "DUP1"
+    },
+    "993": {
+      "op": "REVERT"
+    },
+    "994": {
+      "op": "JUMPDEST"
+    },
+    "995": {
+      "op": "DUP9"
+    },
+    "996": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "998": {
+      "op": "DUP3"
+    },
+    "999": {
+      "op": "DUP6"
+    },
+    "1000": {
+      "op": "ADD"
+    },
+    "1001": {
+      "op": "ADD"
+    },
+    "1002": {
+      "op": "GT"
+    },
+    "1003": {
+      "op": "ISZERO"
+    },
+    "1004": {
+      "op": "PUSH2",
+      "value": "0x3F4"
+    },
+    "1007": {
+      "op": "JUMPI"
+    },
+    "1008": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1010": {
+      "op": "DUP1"
+    },
+    "1011": {
+      "op": "REVERT"
+    },
+    "1012": {
+      "op": "JUMPDEST"
+    },
+    "1013": {
+      "op": "SWAP6"
+    },
+    "1014": {
+      "op": "SWAP9"
+    },
+    "1015": {
+      "op": "SWAP5"
+    },
+    "1016": {
+      "op": "SWAP8"
+    },
+    "1017": {
+      "op": "POP"
+    },
+    "1018": {
+      "op": "POP"
+    },
+    "1019": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1021": {
+      "op": "ADD"
+    },
+    "1022": {
+      "op": "SWAP5"
+    },
+    "1023": {
+      "op": "POP"
+    },
+    "1024": {
+      "op": "POP"
+    },
+    "1025": {
+      "op": "POP"
+    },
+    "1026": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1027": {
+      "op": "JUMPDEST"
+    },
+    "1028": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1030": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1032": {
+      "op": "DUP3"
+    },
+    "1033": {
+      "op": "DUP5"
+    },
+    "1034": {
+      "op": "SUB"
+    },
+    "1035": {
+      "op": "SLT"
+    },
+    "1036": {
+      "op": "ISZERO"
+    },
+    "1037": {
+      "op": "PUSH2",
+      "value": "0x415"
+    },
+    "1040": {
+      "op": "JUMPI"
+    },
+    "1041": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1043": {
+      "op": "DUP1"
+    },
+    "1044": {
+      "op": "REVERT"
+    },
+    "1045": {
+      "op": "JUMPDEST"
+    },
+    "1046": {
+      "op": "POP"
+    },
+    "1047": {
+      "op": "MLOAD"
+    },
+    "1048": {
+      "op": "SWAP2"
+    },
+    "1049": {
+      "op": "SWAP1"
+    },
+    "1050": {
+      "op": "POP"
+    },
+    "1051": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1052": {
+      "op": "JUMPDEST"
+    },
+    "1053": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1055": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1057": {
+      "op": "DUP3"
+    },
+    "1058": {
+      "op": "DUP5"
+    },
+    "1059": {
+      "op": "SUB"
+    },
+    "1060": {
+      "op": "SLT"
+    },
+    "1061": {
+      "op": "ISZERO"
+    },
+    "1062": {
+      "op": "PUSH2",
+      "value": "0x42E"
+    },
+    "1065": {
+      "op": "JUMPI"
+    },
+    "1066": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1068": {
+      "op": "DUP1"
+    },
+    "1069": {
+      "op": "REVERT"
+    },
+    "1070": {
+      "op": "JUMPDEST"
+    },
+    "1071": {
+      "op": "DUP2"
+    },
+    "1072": {
+      "op": "MLOAD"
+    },
+    "1073": {
+      "op": "DUP1"
+    },
+    "1074": {
+      "op": "ISZERO"
+    },
+    "1075": {
+      "op": "ISZERO"
+    },
+    "1076": {
+      "op": "DUP2"
+    },
+    "1077": {
+      "op": "EQ"
+    },
+    "1078": {
+      "op": "PUSH2",
+      "value": "0x43E"
+    },
+    "1081": {
+      "op": "JUMPI"
+    },
+    "1082": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1084": {
+      "op": "DUP1"
+    },
+    "1085": {
+      "op": "REVERT"
+    },
+    "1086": {
+      "op": "JUMPDEST"
+    },
+    "1087": {
+      "op": "SWAP4"
+    },
+    "1088": {
+      "op": "SWAP3"
+    },
+    "1089": {
+      "op": "POP"
+    },
+    "1090": {
+      "op": "POP"
+    },
+    "1091": {
+      "op": "POP"
+    },
+    "1092": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1093": {
+      "op": "JUMPDEST"
+    },
+    "1094": {
+      "op": "DUP2"
+    },
+    "1095": {
+      "op": "DUP4"
+    },
+    "1096": {
+      "op": "DUP3"
+    },
+    "1097": {
+      "op": "CALLDATACOPY"
+    },
+    "1098": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1100": {
+      "op": "SWAP2"
+    },
+    "1101": {
+      "op": "ADD"
+    },
+    "1102": {
+      "op": "SWAP1"
+    },
+    "1103": {
+      "op": "DUP2"
+    },
+    "1104": {
+      "op": "MSTORE"
+    },
+    "1105": {
+      "op": "SWAP2"
+    },
+    "1106": {
+      "op": "SWAP1"
+    },
+    "1107": {
+      "op": "POP"
+    },
+    "1108": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "44e8999e0042649e138c341b7aacd94c67a4e7e0",
+  "source": "pragma solidity ^0.8.0;\n\nimport \"../interfaces/IERC20.sol\";\n\ncontract TrusterLenderPool  {\n\n    IERC20 public GoodToken;\n\n    constructor (address tokenAddress) public {\n        GoodToken = IERC20(tokenAddress);\n    }\n\n    function flashLoan(\n        uint256 borrowAmount,\n        address target,\n        bytes calldata data\n    )\n        external\n    {\n        uint256 balanceBefore = GoodToken.balanceOf(address(this));\n\n        require(balanceBefore >= borrowAmount, \"Not enough tokens in pool\");\n        require(borrowAmount>0, \"Borrow more than 0\");\n        \n        GoodToken.transfer(target, borrowAmount);\n        (bool success, ) = target.call(data);\n        require(success, \"External call failed\");\n\n        uint256 balanceAfter = GoodToken.balanceOf(address(this));\n        require(balanceAfter >= balanceBefore, \"Flash loan hasn't been paid back\");\n    }\n\n}",
+  "sourceMap": "61:809:2:-:0;;;126:91;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;178:9;:32;;-1:-1:-1;;;;;;178:32:2;-1:-1:-1;;;;;178:32:2;;;;;;;;;;61:809;;14:290:4;84:6;137:2;125:9;116:7;112:23;108:32;105:52;;;153:1;150;143:12;105:52;179:16;;-1:-1:-1;;;;;224:31:4;;214:42;;204:70;;270:1;267;260:12;204:70;293:5;14:290;-1:-1:-1;;;14:290:4:o;:::-;61:809:2;;;;;;",
+  "sourcePath": "contracts/truster.sol",
+  "type": "contract"
+}
